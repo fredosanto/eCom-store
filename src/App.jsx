@@ -1,12 +1,21 @@
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./routes/Home";
+import Contact from "./routes/Contact";
 import "./App.css";
+import ErrorPage from "./routes/ErrorPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1 className="text-sky-400">Hello world</h1>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+      </Routes>
     </>
   );
 }
