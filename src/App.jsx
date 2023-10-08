@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./routes/Home";
 import Contact from "./routes/Contact";
