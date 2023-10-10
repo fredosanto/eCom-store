@@ -67,7 +67,7 @@ export default function Contact() {
               {...register("firstName")}
               id="first-name"
               placeholder="Your first name"
-              className="shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
+              className="bg-white shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
             />
             <p className="text-xs text-red-500">{errors.firstName?.message}</p>
           </div>
@@ -77,7 +77,7 @@ export default function Contact() {
               {...register("subject")}
               id="subject"
               placeholder="Add subject"
-              className="shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
+              className="bg-white shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
             />
             <p className="text-xs text-red-500">{errors.subject?.message}</p>
           </div>
@@ -87,7 +87,7 @@ export default function Contact() {
               type="email"
               {...register("email")}
               id="email"
-              className="shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
+              className="bg-white shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
               placeholder="Your email adress"
             />
             <p className="text-xs text-red-500">{errors.email?.message}</p>
@@ -98,14 +98,14 @@ export default function Contact() {
               {...register("message")}
               id="message"
               placeholder="Write a message"
-              className="shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
+              className="bg-white shadow-md p-2 rounded-md focus:outline-none focus:shadow-inner"
             />
             <p className="text-xs text-red-500">{errors.message?.message}</p>
           </div>
           <div>{success ? <p>Success baba!</p> : ""}</div>
           <input
             type="submit"
-            className=" shadow-lg p-3 bg-sky-600 w-32 m-auto transition ease-out duration-200 hover:bg-sky-300 hover:cursor-pointer"
+            className=" shadow-lg p-3 bg-sky-600 rounded-md w-32 m-auto transition ease-out duration-200 hover:bg-sky-300 hover:cursor-pointer"
           />
         </form>
       </div>
