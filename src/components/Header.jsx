@@ -7,7 +7,7 @@ export default function Header() {
   // const [inCartCount, setInCartCount] = useState(0);
   const { totalItems } = useShoppingCartProvider();
   return (
-    <header className="flex justify-between bg-sky-950 p-3">
+    <header className="flex justify-between bg-sky-950 text-white p-3">
       <div className="text-xl font-extrabold bg-green-300 p-2 m-2">
         <Link to="/"> Logo</Link>
       </div>
