@@ -13,7 +13,6 @@ export default function Home() {
       const json = await response.json();
 
       setProducts(json);
-      console.log(json);
     }
     getData();
   }, []);
