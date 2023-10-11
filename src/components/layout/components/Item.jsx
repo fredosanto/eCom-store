@@ -2,12 +2,11 @@ import useDiscount from "../../../hooks/useDiscount";
 export default function Item({ id, title, price, discount, img }) {
   const percentAmount = useDiscount(price, discount);
   const showPercent = percentAmount > 0;
-  //   const showDiscountPrice =
 
   return (
     <div
       key={id}
-      className="text-center bg-sky-300 hover:bg-sky-600 p-5 rounded-xl hover:scale-[1.02] transition duration-500 cursor-pointer "
+      className="text-center bg-sky-200 hover:bg-sky-400 p-5 rounded-xl hover:scale-[1.02] transition duration-500 cursor-pointer "
     >
       <div className="container relative aspect-square ">
         <img src={img} alt={title} className="aspect-square object-cover" />
@@ -20,7 +19,7 @@ export default function Item({ id, title, price, discount, img }) {
         )}
       </div>
       <div className="text-left py-2">
-        <h3 className="text-lg">{title}</h3>
+        <h3 className="text-md">{title}</h3>
         <p
           className={
             "text-2xl font-bold " + (showPercent ? "text-red-600" : "")
@@ -34,7 +33,6 @@ export default function Item({ id, title, price, discount, img }) {
           </p>
         ) : (
           <p className="text-sm">News</p>
-          //   <p className="text-sm">New arrival</p>
         )}
       </div>
       <div>
