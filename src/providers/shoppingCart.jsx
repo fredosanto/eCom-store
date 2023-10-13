@@ -1,13 +1,15 @@
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext, useState, useEffect } from "react";
 
 const Context = createContext(null);
 
 function ShoppingCartProvider(props) {
   const [cartItems, setCartItems] = useState([]);
 
-  function addItem(id, title) {
-    setCartItems((prevState) => prevState.concat(id));
+  function addItem(id) {
+    setCartItems((prevState) => [...prevState, id]);
+    // localStorage.setItem("cart", JSON.stringify(id));
     console.log(id);
+    console.log("addItem", cartItems);
   }
 
   // ['lampe', 'lampe', 'c']
@@ -22,12 +24,13 @@ function ShoppingCartProvider(props) {
       ...cartItems.slice(0, idIndex),
       ...cartItems.slice(idIndex + 1),
     ];
-    console.log({ newCart });
+    console.log("new cart", { newCart });
     setCartItems(newCart);
   }
 
   const totalItems = cartItems.length;
-  console.log(cartItems);
+  console.log("cart", cartItems);
+  localStorage.setItem("cart", JSON.stringify(cartItems));
 
   return (
     <Context.Provider value={{ totalItems, cartItems, addItem, removeItem }}>

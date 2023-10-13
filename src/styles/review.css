@@ -1,0 +1,13 @@
+#reviewBox {
+  animation: fade-in 1000ms forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}

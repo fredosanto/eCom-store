@@ -35,7 +35,7 @@ export default function Home() {
           }}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 my-10 text-black  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10 text-black  ">
         {searchItems.map((item) => (
           <Item
             key={item.id}
@@ -44,6 +44,7 @@ export default function Home() {
             price={item.price}
             discount={item.discountedPrice}
             img={item.imageUrl}
+            reviews={item.reviews}
           />
         ))}
       </div>

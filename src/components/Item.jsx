@@ -8,7 +8,7 @@ export default function Item({ id, title, price, discount, img }) {
   return (
     <div
       key={id}
-      className="text-center bg-sky-200 hover:bg-sky-400 p-5 rounded-xl hover:scale-[1.02] transition duration-500  "
+      className="text-center text-black bg-[#fff6ec] hover:bg-black hover:text-white p-5 rounded-xl hover:scale-[1.02] transition duration-500  "
     >
       <div className="container relative aspect-square ">
         <img src={img} alt={title} className="aspect-square object-cover" />
@@ -27,7 +27,7 @@ export default function Item({ id, title, price, discount, img }) {
             "text-2xl font-bold " + (showPercent ? "text-red-600" : "")
           }
         >
-          {price}
+          {discount}
         </p>
         {showPercent ? (
           <p className="text-sm">
@@ -39,7 +39,7 @@ export default function Item({ id, title, price, discount, img }) {
       </div>
       <div>
         <Link to={`product/${id}`}>
-          <button className="bg-teal-500 px-5 py-1 w-full rounded-md hover:bg-teal-400">
+          <button className="bg-teal-500 text-black px-5 py-1 w-full rounded-md transition ease-in-out hover:bg-teal-300  duration-300">
             View
           </button>
         </Link>

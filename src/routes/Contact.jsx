@@ -46,19 +46,23 @@ export default function Contact() {
   } = useForm({ resolver: yupResolver(schema) });
 
   function onSubmit(data) {
+    setSuccess(false);
     console.log("data", data);
-    setSuccess(true);
+    if (data) {
+      setSuccess(true);
+    }
   }
 
   return (
-    <div className="shadow-md bg-slate-200 m-auto my-10 p-10 w-1/2 text-center rounded-md">
+    <div className="shadow-md bg-slate-200 m-auto my-10 p-10 md:w-1/2 text-center rounded-md">
       <h1 className="text-black uppercase text-2xl font-bold my-5">
         Contact us
       </h1>
       <div>
         <form
+          id="myForm"
           action=""
-          className="flex flex-col gap-5 text-left text-black w-1/2 m-auto"
+          className="flex flex-col gap-5 text-left text-black m-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex flex-col">
@@ -102,7 +106,9 @@ export default function Contact() {
             />
             <p className="text-xs text-red-500">{errors.message?.message}</p>
           </div>
-          <div>{success ? <p>Success baba!</p> : ""}</div>
+          <div className="text-center">
+            {success ? <p>Success! Form is sent.</p> : ""}
+          </div>
           <input
             type="submit"
             className=" shadow-lg p-3 bg-sky-600 rounded-md w-32 m-auto transition ease-out duration-200 hover:bg-sky-300 hover:cursor-pointer"
