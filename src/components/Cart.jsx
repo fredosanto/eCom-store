@@ -21,8 +21,8 @@ export default function Cart() {
             ))}
           </div>
         )}
-        <div className="flex flex-col  gap-2 rounded-lg mx-auto  order-first md:order-last justify-center my-20">
-          <h1 className="text-2xl font-bold">Order Summary</h1>
+        <div className="flex flex-col py-2 px-5 bg-slate-100 w-72 max-h-56 gap-2 mx-auto my-20 order-first md:order-last">
+          <h1 className="text-2xl m-auto font-bold underline">Order Summary</h1>
           <div className="flex justify-between">
             <p className="inline-block">Subtotal</p>
             <p className="inline-block">- NOK</p>
