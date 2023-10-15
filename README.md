@@ -1,8 +1,25 @@
-# React + Vite
+# eCom Store - Course Assigment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Link to the site:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built with
+
+- HTML
+- CSS
+- JavaScript
+- React
+- react-router-dom
+- react-hook-form
+- yup
+
+## Getting started
+
+### Installing
+
+1. Clone the repo:
+
+```
+git clone https://github.com/fredosanto/eCom-store.git
+```
