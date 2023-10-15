@@ -1,9 +1,4 @@
-import { Link } from "react-router-dom";
-
 export default function CheckoutSuccess() {
-  function refreshPage() {
-    window.location.reload();
-  }
   return (
     <div className="h-screen flex justify-center items-start">
       <div className="flex flex-col gap-2 bg-slate-100 border-slate-600 border-2 rounded-md p-10 mt-20 text-center">
