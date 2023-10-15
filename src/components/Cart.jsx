@@ -36,7 +36,7 @@ export default function Cart() {
   function handleCheckout() {
     localStorage.clear();
 
-    window.location.reload();
+    // window.location.reload();
   }
 
   return (
