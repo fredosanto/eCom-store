@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-export default function Reviews({ id, username, rating, description }) {
+export default function Reviews({ username, rating, description }) {
   let star = "🌟";
   return (
     <div>

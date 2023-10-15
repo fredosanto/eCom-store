@@ -3,7 +3,6 @@ import { CartIcon } from "./icons/cart";
 import { useShoppingCartProvider } from "../providers/useShoppingCartProvider";
 
 export default function Header() {
-  // const [inCartCount, setInCartCount] = useState(0);
   const { totalItems } = useShoppingCartProvider();
   return (
     <header className="flex justify-between bg-black text-white p-3">

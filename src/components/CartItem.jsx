@@ -4,10 +4,7 @@ export default function CartItem({ cartItem }) {
   const { addItem, removeItem } = useShoppingCartProvider();
   return (
     <>
-      <div
-        //   key={cartItem.index + cartItem.id}
-        className="flex gap-4 items-center justify-center p-2"
-      >
+      <div className="flex gap-4 items-center justify-center p-2">
         <div className="aspect-square max-h-32">
           <img
             src={cartItem.imageUrl}

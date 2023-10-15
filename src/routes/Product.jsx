@@ -8,7 +8,7 @@ export default function Product() {
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  //   const url = `https://api.noroff.dev/api/v1/online-shop/${id}`;
+
   let { id } = useParams();
   const { addItem } = useShoppingCartProvider();
   const [open, setOpen] = useState(true);
@@ -32,8 +32,6 @@ export default function Product() {
 
     getData(`https://api.noroff.dev/api/v1/online-shop/${id}`);
   }, [id]);
-
-  // console.log(product);
 
   if (isLoading || !product) {
     return <div>Loading</div>;
@@ -105,12 +103,6 @@ export default function Product() {
                 {open ? "Show +" : "Hide -"}
               </label>
             )}
-            {/* <label
-              htmlFor="expandCollapse"
-              className="cursor-pointer p-2 bg-black text-white rounded-md transition ease-in-out hover:bg-teal-300 hover:text-black duration-300"
-            >
-              {open ? "Show +" : "Hide -"}
-            </label> */}
             <div id="reviewBox" className={`${!open ? "block" : "hidden"}`}>
               {comments.map((comment) => (
                 <Reviews
