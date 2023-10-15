@@ -1,6 +1,7 @@
 import CartItem from "./CartItem";
 import { useShoppingCartProvider } from "../providers/useShoppingCartProvider";
 import { useCalculateSubTotal } from "../hooks/useCalculateSubTotal";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   const { cartItems } = useShoppingCartProvider();
@@ -34,7 +35,8 @@ export default function Cart() {
 
   function handleCheckout() {
     localStorage.clear();
-    window.location.assign("/checkout");
+
+    window.location.reload();
   }
 
   return (
@@ -73,13 +75,19 @@ export default function Cart() {
             disabled={bundledCartItems.length > 0 ? false : true}
             onClick={handleCheckout}
             className={
-              "bg-teal-500 px-5 py-3 rounded-md max-w-xs transition ease-in-out  duration-300 " +
+              "bg-teal-500 rounded-md transition ease-in-out  duration-300 " +
               (bundledCartItems.length > 0
                 ? "bg-teal-500 hover:bg-teal-300"
                 : "bg-slate-300")
             }
           >
-            {bundledCartItems.length > 0 ? "Checkout" : "Empty cart"}
+            {bundledCartItems.length > 0 ? (
+              <Link to="/checkout" className="block px-5 py-3">
+                Checkout
+              </Link>
+            ) : (
+              "Empty cart"
+            )}
           </button>
         </div>
       </div>
