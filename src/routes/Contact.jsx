@@ -1,4 +1,4 @@
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useState } from "react";
@@ -42,15 +42,17 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
   function onSubmit(data) {
-    setSuccess(false);
     console.log("data", data);
     if (data) {
       setSuccess(true);
+      reset();
     }
+    setTimeout(() => setSuccess(false), 3000);
   }
 
   return (

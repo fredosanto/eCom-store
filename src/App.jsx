@@ -6,6 +6,7 @@ import Contact from "./routes/Contact";
 import Cart from "./components/Cart";
 import "./App.css";
 import ErrorPage from "./routes/ErrorPage";
+import CheckoutSuccess from "./routes/CheckoutSuccess";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="product/:id" element={<Product />} />
           <Route path="contact" element={<Contact />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="checkout" element={<CheckoutSuccess />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

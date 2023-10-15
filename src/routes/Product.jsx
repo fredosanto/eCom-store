@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useShoppingCartProvider } from "../providers/shoppingCart";
+import { useShoppingCartProvider } from "../providers/useShoppingCartProvider";
 import Reviews from "../components/Reviews";
 import "../styles/review.css";
 
@@ -10,7 +10,7 @@ export default function Product() {
   const [isError, setIsError] = useState(false);
   //   const url = `https://api.noroff.dev/api/v1/online-shop/${id}`;
   let { id } = useParams();
-  const { addItem, removeItem } = useShoppingCartProvider();
+  const { addItem } = useShoppingCartProvider();
   const [open, setOpen] = useState(true);
 
   useEffect(() => {

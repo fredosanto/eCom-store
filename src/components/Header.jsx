@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { CartIcon } from "./icons/cart";
-import { useShoppingCartProvider } from "../providers/shoppingCart";
+import { useShoppingCartProvider } from "../providers/useShoppingCartProvider";
 
 export default function Header() {
   // const [inCartCount, setInCartCount] = useState(0);
